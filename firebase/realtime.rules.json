@@ -1,0 +1,17 @@
+
+{
+  "rules": {
+    "rider_locations": {
+      "$riderId": {
+        ".read": "auth != null",
+        ".write": "auth != null && $riderId === auth.uid"
+      }
+    },
+    "order_tracking": {
+      "$orderId": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}
